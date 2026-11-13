@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4f46e5">
+  <title>RecoManga</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <span class="brand">RecoManga</span>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h1 id="titulo-form">Recomendar un anime o manga</h1>
+      <form id="form-serie">
+
+          <label for="titulo">Título</label>
+          <input type="text" id="titulo" name="titulo" placeholder="Ej: One Piece" required>
+
+          <label for="tipo">Tipo</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Elegí una opción</option>
+            <option value="Anime">Anime</option>
+            <option value="Manga">Manga</option>
+            <option value="Anime y Manga">Anime y Manga</option>
+          </select>
+
+          <label for="genero">Género</label>
+          <select id="genero" name="genero" required>
+            <option value="">Elegí un género</option>
+            <option value="Acción">Acción</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Comedia">Comedia</option>
+            <option value="Drama">Drama</option>
+            <option value="Fantasía">Fantasía</option>
+            <option value="Romance">Romance</option>
+            <option value="Shonen">Shonen</option>
+            <option value="Seinen">Seinen</option>
+            <option value="Deportes">Deportes</option>
+            <option value="Misterio">Misterio</option>
+            <option value="Terror">Terror</option>
+            <option value="Otro">Otro</option>
+          </select>
+
+          <label for="puntuacion">Puntuación (0 a 10)</label>
+          <input type="number" id="puntuacion" name="puntuacion" min="0" max="10" step="0.1" placeholder="Ej: 9.5" required>
+
+          <label for="resena">Reseña</label>
+          <textarea id="resena" name="resena" rows="3" placeholder="De qué trata y qué te pareció" required></textarea>
+
+          <label for="por-que">¿Por qué la recomendás?</label>
+          <textarea id="por-que" name="por_que" rows="3" placeholder="Por qué otra persona debería verla o leerla" required></textarea>
+
+          <label for="imagen-file">Portada (imagen)</label>
+          <input type="file" id="imagen-file" name="imagen-file" accept="image/jpeg,image/png,image/webp,image/gif" required>
+
+          <label class="checkbox">
+            <input type="checkbox" id="terminada" name="terminada">
+            Ya la terminé de ver / leer
+          </label>
+
+          <div class="botones">
+            <button type="submit" id="btn-submit">Publicar recomendación</button>
+          </div>
+        </form>
+    </section>
+  </main>
+
+  <footer>RecoManga · Recomendaciones de anime y manga</footer>
+</body>
+</html>
